@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/imgUser"
+            android:contentDescription="@string/imgUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/min_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtNome"
+            app:srcCompat="@drawable/ic_user"/>
+
+    <EditText
+            android:id="@+id/txtNome"
+            android:hint="@string/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            app:layout_constraintStart_toEndOf="@+id/imgUser"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:id="@+id/imgClock"
+            android:contentDescription="@string/imgClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/min_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtHorario"
+            app:srcCompat="@drawable/ic_clock"/>
+
+    <EditText
+            android:id="@+id/txtHorario"
+            android:hint="@string/hint_horaro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgClock"
+            app:layout_constraintTop_toBottomOf="@+id/txtNome"/>
+
+    <CheckBox
+            android:id="@+id/cbSegunda"
+            android:text="@string/segunda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtHorario"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintEnd_toStartOf="@+id/cbTerca"
+            android:layout_marginEnd="@dimen/min_margin"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <CheckBox
+            android:id="@+id/cbTerca"
+            android:text="@string/terca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintTop_toBottomOf="@+id/txtHorario"
+            app:layout_constraintStart_toEndOf="@+id/cbSegunda" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+            android:id="@+id/cbQuarta"
+            android:text="@string/quarta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cbSegunda"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cbQuinta"
+            android:layout_marginEnd="@dimen/min_margin"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <CheckBox
+            android:id="@+id/cbQuinta"
+            android:text="@string/quinta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/cbTerca"
+            app:layout_constraintStart_toEndOf="@+id/cbQuarta" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <CheckBox
+            android:id="@+id/cbSexta"
+            android:text="@string/sexta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cbQuarta"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cbSabado"
+            android:layout_marginEnd="@dimen/min_margin"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <CheckBox
+            android:id="@+id/cbSabado"
+            android:text="@string/sabado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cbQuinta"
+            app:layout_constraintStart_toEndOf="@+id/cbSexta" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"/>
+
+    <CheckBox
+            android:id="@+id/cbDomingo"
+            android:text="@string/domingo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cbSabado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginEnd="@dimen/small_margin" app:layout_constraintHorizontal_bias="0.0"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/rvAluno"
+            android:layout_marginStart="@dimen/min_margin"
+            android:layout_marginEnd="@dimen/min_margin"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtAddAluno"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"/>
+
+    <EditText
+            android:id="@+id/txtAddAluno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/addAluno"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbDomingo"
+            app:layout_constraintEnd_toStartOf="@+id/btnAddAluno" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_add_light"
+            android:id="@+id/btnAddAluno"
+            android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/cbDomingo"/>
+
+</android.support.constraint.ConstraintLayout>

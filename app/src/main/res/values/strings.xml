@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Class Helper</string>
+    <string name="name">Nome</string>
+    <string name="hint_horaro">08:00 as 12:00</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="salvar">Salvar</string>
+    <string name="imgUser">Icone Pessoa</string>
+    <string name="imgClock">Icone Relogio</string>
+    <string name="segunda">Segunda</string>
+    <string name="terca">Terça</string>
+    <string name="quarta">Quarta</string>
+    <string name="quinta">Quinta</string>
+    <string name="sexta">Sexta</string>
+    <string name="sabado">Sabado</string>
+    <string name="domingo">Domingo</string>
+    <string name="save_erro">Ops... Ocorreu um erro ao salvar</string>
+    <string name="addAluno">Adicionar novo aluno</string>
+</resources>
